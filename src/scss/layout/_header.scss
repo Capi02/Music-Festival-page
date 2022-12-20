@@ -1,0 +1,9 @@
+@use 'base/variables' as v;
+
+.header{
+  background-color: v.$menta;
+ 
+  h1{
+    color: v.$white;
+  }
+}

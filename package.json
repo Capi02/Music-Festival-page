@@ -1,0 +1,29 @@
+{
+  "name": "musicfestival",
+  "version": "1.0.0",
+  "description": "Project with SASS, Gulp, and HTML",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch src/scss:build/css"
+  },
+  "keywords": [
+    "SASS",
+    "Gulp"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Capi02/Music-Festival-page.git"
+  },
+  "author": "Erick Alejandro Capitanachi Gonzalez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Capi02/Music-Festival-page/issues"
+  },
+  "homepage": "https://github.com/Capi02/Music-Festival-page#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.57.0"
+  }
+}
