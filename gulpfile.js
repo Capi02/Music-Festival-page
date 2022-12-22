@@ -1,7 +1,13 @@
 
-const { src, dest, watch} = require("gulp");
+const { src, dest, watch, parallel} = require("gulp");
+
+// *CSS
 const sass = require("gulp-sass")(require("sass"));
 const plumber = require("gulp-plumber");
+
+//*IMAGENES
+
+const webp = require('gulp-webp');
 
 function css(done) {
   
@@ -15,9 +21,23 @@ function css(done) {
   done() //Esto es un callback que avisa a gulp cuando llegamos al final
 }
 
+function formatoWebp (done){
+
+  const opciones = {
+    quality: 50
+  };
+
+  src("src/img/**/*.{jpg, png}")
+    .pipe( webp(opciones))
+    .pipe ( dest("build/img"))
+
+  done();
+}
+
 function dev(done){
   watch("src/scss/**/*.scss", css)
 }
 
 exports.css = css;
-exports.dev = dev;
+exports.formatoWebp = formatoWebp;
+exports.dev = parallel( formatoWebp, dev );
