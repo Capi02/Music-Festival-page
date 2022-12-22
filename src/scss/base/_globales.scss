@@ -20,6 +20,7 @@ body{
 p{
   font-size: 2rem;
   color: v.$black;
+  line-height: 1.2;
 }
 
 .container{
@@ -39,3 +40,8 @@ h1,h2,h3{
 h1{ font-size: 4rem;}
 h2{ font-size: 3.6rem;}
 h3{ font-size: 3rem;}
+
+img{
+  max-width: 100%;
+  display: block;
+}

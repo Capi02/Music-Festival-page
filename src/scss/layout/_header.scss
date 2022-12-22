@@ -1,9 +1,48 @@
 @use 'base/variables' as v;
+@use 'base/mixins' as m;
+
 
 .header{
   background-color: v.$menta;
  
   h1{
     color: v.$white;
+    text-align: center;
+    @include m.tablet {
+      margin: 0;
+    }
+    
+  }
+  .header-content{
+    padding: 2rem;
+    @include m.tablet {
+      display:flex;
+      justify-content:space-between;
+      align-items: center;
+      
+    }
   }
 }
+
+.navegacion-principal{ 
+  @include m.tablet {
+    display:flex;
+    gap: 2rem;
+  }
+  a{
+    display: block;
+    text-align: center;
+    color: v.$white;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+
+    @include m.tablet {
+      margin:0;
+    }
+
+    &:hover{  /* El amperson sirve para eliminar el espacio que se crea en la hoja de estilos css con el selector de hover */
+      color: v.$yellow;
+    }
+  }
+}
+

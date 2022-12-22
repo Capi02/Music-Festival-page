@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,10 +11,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="build/css/app.css">
 </head>
+
 <body>
 
     <header class="header">
-        <div class="container content-header">
+        <div class="container header-content">
             <h1>Rock & EDM Festival</h1>
 
             <nav class="navegacion-principal">
@@ -24,5 +26,39 @@
         </div>
     </header>
 
+    <div class="video">
+        <div class="overlay">
+            <div class="container video-content">
+                <h2>Rock & EDM Festival</h2>
+                <p>Diciembre 2022, Reynosa, México. </p>
+            </div>
+        </div>
+        <video autoplay muted loop>
+            //aqui se agregan varias opciones ya que no todos los navegadores aceptan la misma extension
+            <source src="video/concierto.mp4" type="video/mp4">
+            <source src="video/concierto.ogg" type="video/ogg">
+            <source src="video/concierto.webm" type="video/webm">
+        </video>
+    </div>
+
+    <!-- ?autoplay: sirve para que se reproduzca automaticamente al entrar
+         ?muted: sirve para algunos navegadores que requieren que este en silencio si es que quieres tenerlo que se reproduzca solo
+        ?loop: sirve para que se repita el video al finalizar 
+        ?control: te agrega todas las opciones como por ejemplo un video de youtube -->
+
+    <section class="container sobre-festival">
+        <div class="imagen">
+            <img src="/img/imagen_vocalista.jpg" alt="Imagen Vocalista Festival">
+        </div>
+        <div class="contenido-festival">
+            <h2>Rock & EDM Festival</h2>
+            <p class="fecha">Junio 2022, Reynosa, México </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minus aliquid facere totam at, numquam quis eaque nam eligendi reiciendis molestias repellendus ullam et architecto tempore neque suscipit impedit earum!</p>
+        </div>
+    </section>
+
+
+
 </body>
+
 </html>
