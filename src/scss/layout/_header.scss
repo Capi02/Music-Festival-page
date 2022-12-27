@@ -2,34 +2,49 @@
 @use 'base/mixins' as m;
 
 
-.header{
+.header {
   background-color: v.$menta;
- 
-  h1{
-    color: v.$white;
-    text-align: center;
-    @include m.tablet {
-      margin: 0;
+
+  @include m.tablet {
+    &.sticky {
+      left: 0;
+      top: 0;
+      box-shadow: .1rem .2rem .3rem .3rem #444;
+      position: fixed;
+      width: 100%;
     }
     
   }
-  .header-content{
-    padding: 2rem;
+
+  h1 {
+    color: v.$white;
+    text-align: center;
+
     @include m.tablet {
-      display:flex;
-      justify-content:space-between;
+      margin: 0;
+    }
+
+  }
+
+  .header-content {
+    padding: 2rem;
+
+    @include m.tablet {
+      display: flex;
+      justify-content: space-between;
       align-items: center;
-      
+
     }
   }
 }
 
-.navegacion-principal{ 
+.navegacion-principal {
   @include m.tablet {
-    display:flex;
+    display: flex;
     gap: 2rem;
   }
-  a{
+
+  a {
     display: block;
     text-align: center;
     color: v.$white;
@@ -37,10 +52,11 @@
     margin-bottom: 1rem;
 
     @include m.tablet {
-      margin:0;
+      margin: 0;
     }
 
-    &:hover{  /* El amperson sirve para eliminar el espacio que se crea en la hoja de estilos css con el selector de hover */
+    &:hover {
+      /* El amperson sirve para eliminar el espacio que se crea en la hoja de estilos css con el selector de hover */
       color: v.$yellow;
     }
   }
